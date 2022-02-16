@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 135%;
+    background-color: none;
+}
+
+
+.up {
+    height: 70%;
+    background-size: cover;
+    animation: animate 25s infinite;
+}
+.opacity {
+    background-color: rgba(0,128,128, .6);
+    height: 100%;
+}
+
+
+.top-head {
+    height: 7%;
+}
+.top-combobox {
+    height: 13%;
+    text-align: center;
+    padding: 0px 150px;
+}
+    
+    .top-combobox .combobox {
+        height: 100%;
+    }
+    
+
+
+.top-body{
+    width: 100%;
+    height: 80%;
+}
+
+
+
+.top-bottom {
+    height: 30%;
+    position: relative;
+}
+#left, #center, #right {
+    height: 90%;
+    width: 20%;
+    position: relative;
+    background-color: white;
+}
+
+
+.top{
+    height: 95%;
+}
+
+
+
+
+@keyframes animate{
+    0%,100%{
+        background-image: url(../image/background/background2.jpg);
+    }
+    25% {
+        background-image: url(../image/background/background3.jpg);
+    }
+    50% {
+        background-image: url(../image/background/background4.jpg);
+    }
+    75% {
+        background-image: url(../image/background/background.jpg);
+    }
+}
+
+
+
+.top-body .slider {
+    box-sizing: border-box;
+    animation: slider 20s linear infinite;
+}
+
+@keyframes slider{
+    0% {
+        margin-left: -1500px;
+    }
+    10% {
+        margin-left: -950px;
+    }
+    20% {
+        margin-left: -950px;
+    }
+    30% {
+        margin-left: -450px;
+    }
+    63% {
+        margin-left: -450px;
+    }
+    70% {
+        margin-left: 30px;
+    }
+    80% {
+        margin-left: 30px;
+    }
+    90%{
+        margin-left: 30px;
+    }
+    100% {
+        margin-left: 950px;
+    }
+}
+
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background-color: white;
+    width: 23%;
+    position: relative;
+    right: 14px;
+}
+
+.login .popup ul li{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.overlay .popup ul li {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 13.3px;
+    color: #494f57;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
